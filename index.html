@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% for post in site.posts limit: 10 %}
+<h1>Welcome to Techline</h1>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h3>{{ post.title | truncatewords: 10 | capitalize }}</h3>
+    <h5>{{ post.date | date:"%a %b %d %Y" }}</h5>
+    <p>
+      <a href="{{ post.url }}">Read Post -></a>
+    </p>
+  </div>
+</div>
+{% endfor %}
