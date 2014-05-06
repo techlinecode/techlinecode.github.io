@@ -1,9 +1,15 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+{% include header.html %}
 
-<div class="post">
-{{ content }}
+<div class="row-fluid">
+  <div class="span8">
+    <h1>{{ page.title }}</h1>
+    <p class="muted">{{ page.date | date_to_long_string }}</p>
+
+    {{ content }}
+  </div>
+  <div class="span4">
+    {% include sidebar.html %}
+  </div>
 </div>
+{% include disqus.html %}
+{% include footer.html %}

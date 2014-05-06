@@ -1,69 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <meta name="description" content="TechLine - Independent Tech News">
-        <link rel="shortcut icon" href="/img/favicon.ico" />
-
-        <!-- Google -->
-        <link rel="publisher" href="https://plus.google.com/103713744648831859872/">
-        {% if page.path contains '_posts' %}
-            <link rel="author" href="https://plus.google.com/{{ post.rel_author }}">
-        {% endif %}
-
-        <!-- Facebook -->
-        <meta property="og:title" content="TechLine - {{ page.title }}">
-        <meta property="og:type" content="article">
-        <!-- TODO: <meta property="og:image" content=""> -->
-        <meta property="og:description" content="{{ post.summary }}">
-        <!-- TODO: <meta property="fb:admins" content=""> -->
-
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="{{ page.title }}">
-        <meta name="twitter:description" content="{{ post.summary }}">
-        <!-- <meta name="twitter:image" content=""> -->
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-        <!-- Print CSS -->
-        <link rel="stylesheet" href="/css/print.css" media="print">
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <script src="js/lib/instantclick.min.js" data-no-instant></script>
-        <script data-no-instant>InstantClick.init();</script>
-    </body>
-</html>
+{% include header.html %}
+<div class="row-fluid">
+    <div class="span2">
+    	{% include leftsidebar.html %}
+    <div class="span8">  
+  {{ content }}
+   </div>
+    <div class="span2">
+        {% include sidebar.html %}
+    </div>
+</div>
+{% include footer.html %}
