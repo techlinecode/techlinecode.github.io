@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 {% for post in site.posts limit: 10 %}
