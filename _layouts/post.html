@@ -1,14 +1,15 @@
 {% include header.html %}
 
 <div class="row-fluid">
+  <div class="span1">
+  {% include social.html %}
+  </div>
   <div class="span8">
     <h1>{{ page.title }}</h1>
     <p class="muted">{{ page.date | date_to_long_string }}</p>
-{% include share.html %}
-   
-    {{ content }}
+       {{ content }}
   </div>
-  <div class="span4">
+  <div class="span3">
     {% include sidebar.html %}
   </div>
 </div>
